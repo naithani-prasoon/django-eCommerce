@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
+from .user import RegistrationForm
+
 def userLogin(request):
     if request.method == 'POST':
         form = AuthenticationForm(request.POST)
@@ -12,7 +14,7 @@ def userLogin(request):
         
         if userAuthentication is not None:
             login(request,userAuthentication)
-            redirect('registration.html')
+            return render(request,'registration.html')
         else:
             preFilledForm = AuthenticationForm(request.POST)
             return redirect(request, 'login.html', {'form': preFilledForm})
@@ -24,7 +26,7 @@ def userLogin(request):
 
 def createUser(request):
     if request.method == 'POST':
-        createForm = UserCreationForm(request.POST)
+        createForm = RegistrationForm(request.POST)
         if createForm.is_valid():
             createForm.save()
             username = request.POST['username']
@@ -35,5 +37,5 @@ def createUser(request):
         else:
             return render(request, 'registration.html', {'form': createForm})
     else:
-        createForm = UserCreationForm()
+        createForm = RegistrationForm()
     return render(request, 'registration.html',{'form':createForm})
