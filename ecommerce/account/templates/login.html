@@ -1,0 +1,42 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/forms.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/standard.css' %}">
+</head>
+<body>
+    <div class = "pageSection">
+        <div class="loginProductPhoto">
+            <img src="{%static 'media/undraw_Login_re_4vu2.svg' %}">
+        </div>
+        
+        <form method="POST" action="">
+            {%csrf_token %}
+            <div class = "formGrid">
+                <h1>Sign In</h1>
+                <div class="inputField">
+                    <p>Username</p>
+                    {{ signform.username }}
+                </div>
+                <div class="inputField">
+                    <p>Password</p>
+                    {{ signform.password }}
+                </div>
+                <button type="submit">Sign In</button>
+                <div class="loginLinks">
+                    <a href="{%url 'register'%}">Dont have an account?</a>
+                    <a href="">Forgot Password or Username</a>
+                </div>
+            </div>
+            
+        </form> 
+    </div>
+</body>
+</html>

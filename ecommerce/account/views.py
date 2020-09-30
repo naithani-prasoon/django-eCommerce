@@ -5,6 +5,9 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 from .user import RegistrationForm
 
+def index(request):
+    return HttpResponse("This is Home")
+
 def userLogin(request):
     if request.method == 'POST':
         form = AuthenticationForm(request.POST)
@@ -14,10 +17,10 @@ def userLogin(request):
         
         if userAuthentication is not None:
             login(request,userAuthentication)
-            return render(request,'registration.html')
+            return redirect('home')
         else:
             preFilledForm = AuthenticationForm(request.POST)
-            return redirect(request, 'login.html', {'form': preFilledForm})
+            return render(request, 'login.html', {'signform': preFilledForm})
     else:
         form = AuthenticationForm()
     
@@ -29,11 +32,11 @@ def createUser(request):
         createForm = RegistrationForm(request.POST)
         if createForm.is_valid():
             createForm.save()
-            username = request.POST['username']
-            password = request.POST['password']
+            username = createForm.cleaned_data.get('username')
+            password = createForm.cleaned_data.get('password1')
             userAuthentication = authenticate(request, username = username, password = password)
             login(request,userAuthentication)
-            return redirect('admin')
+            return redirect('home')
         else:
             return render(request, 'registration.html', {'form': createForm})
     else:

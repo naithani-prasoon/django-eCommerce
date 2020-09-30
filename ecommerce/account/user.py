@@ -3,15 +3,11 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 
 class RegistrationForm(UserCreationForm):
+    email = forms.EmailField(max_length=50)
     class Meta:
         model = User
-        fields = [
-            'first_name',
-            'last_name',
-            'email',
-            'password1',
-            'password2'
-        ]
+        fields = ["email", "username", "password1", "password2"]
+
 
 class LoginForm(AuthenticationForm):
     class Meta:
@@ -20,3 +16,7 @@ class LoginForm(AuthenticationForm):
             'email',
             'password1'
         ]
+
+
+    
+
