@@ -107,3 +107,52 @@ button[type="submit"]:hover{
 .loginLinks a:hover{
     color:rgba(0,0,0,0.8);
 }
+
+@media (max-width: 768px) and (min-width:641px){
+    .loginProductPhoto{
+        display: none;
+    }
+}
+
+@media(max-width:640px){
+
+    form{
+        margin:60px auto;
+    }
+    .formGrid{
+        max-width: 300px;
+        margin:0 auto;
+    }
+    .loginProductPhoto{
+        display: none;
+    }
+    .inputField{
+        margin:12px 5px;
+        text-align: left;
+        width:auto;
+        display: flex;
+        flex-direction: column;
+        transform: translateX(-20px);
+    }
+    input,button{
+        width:100%;
+        font-size: 14px;
+    }
+
+    button[type="submit"]{
+        width:100%;
+        font-size: 15px;
+    }
+
+    .inputField p{
+        font-size: 15px;
+    }
+
+    .loginLinks{
+        flex-direction: column;
+    }
+
+    .loginLinks a{
+        padding:15px 10px 0 10px;
+    }
+}
