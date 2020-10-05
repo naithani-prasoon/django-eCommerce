@@ -1,5 +1,7 @@
-
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,26 +14,45 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/standard.css' %}">
 </head>
 <body>
-    <div class = "pageSection">
-        <div class="loginProductPhoto">
-            <img src="{%static 'media/undraw_Login_re_4vu2.svg' %}">
-        </div>
-        
+    <div class = "pageSection">        
         <form method="POST" action="">
             {%csrf_token %}
             <div class = "formGrid">
                 <h1>Sign Up</h1>
-                <div class="inputField">
-                    <p>Username*</p>
-                    {{ form.username }}
+                <div class="registrationSec">
+                    <div>
+                        <div class="inputField">
+                            <p>First Name*</p>
+                            {{ form.first_name }}
+                        </div>
+                        <div class="inputField">
+                            <p>Last Name</p>
+                            {{ form.last_name }}
+                        </div>
+                        <div class="inputField">
+                            <p>Email Address*</p>
+                            {{ form.email }}
+                        </div>
+                    </div>
+                    <div>
+                        <div class="inputField">
+                            <p>Username*</p>
+                            {{ form.username }}
+                        </div>
+                        <div class="inputField">
+                            <p>Password*</p>
+                            {{ form.password1 }}
+                        </div>
+                        <div class="inputField">
+                            <p>Confirm Password*</p>
+                            {{ form.password2 }}
+                        </div>
+                    </div>
                 </div>
-                <div class="inputField">
-                    <p>Password*</p>
-                    {{ form.password1 }}
-                </div>
-                <div class="inputField">
-                    <p>Confirm Password*</p>
-                    {{ form.password2 }}
+                <div class ="errorText">
+                    {%for message in messages%}
+                        {{message}}
+                    {%endfor%}
                 </div>
                 <button type="submit">Become a Member</button>
                 <div class="loginLinks">
@@ -43,3 +64,4 @@
     </div>
 </body>
 </html>
+{% endblock %}

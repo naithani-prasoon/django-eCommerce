@@ -1,3 +1,19 @@
+::-webkit-scrollbar {
+    width: 10px;
+	overflow: auto;
+}
+
+::-webkit-scrollbar-track {
+	background: white;
+	border-radius:50px;
+	overflow: auto;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(0,0,0,0.2);
+	overflow: auto;
+}
+
 p{
     margin-block-start: 0;
     margin-block-end: 0;
@@ -11,9 +27,19 @@ h1{
     font-family: 'Playfair Display', serif;
 }
 
+figcaption{
+    font-family: 'Poppins', sans-serif;
+    color:rgb(180,180,180);
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+}
+
 .pageSection{
     display: flex;
-    flex-direction: row;
+    position:relative;
     align-items: center;
     justify-content: center;
     margin:0 auto;
@@ -21,4 +47,13 @@ h1{
     max-width:1440px;
     height: 100vh;
     overflow: hidden;
+}
+
+.errorText{
+    font-size:16px;
+    font-family: 'Poppins', serif;
+    margin-bottom: 10px;
+    color:indianred;
+    font-weight: 600;
+
 }

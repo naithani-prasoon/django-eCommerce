@@ -1,0 +1,63 @@
+body{
+    font-family: 'Poppins', sans-serif  ;
+}
+
+.accountSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.userTabs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.userContent{
+    flex:1;
+    width:100%;
+}
+
+.userContent .accountTabs{
+    width:100%;
+    min-width: 500px;
+}
+
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size:18px;
+    text-align: left;
+    margin:10px 0;
+    padding:18px 32px;
+    font-weight: 500;
+}
+
+.userTabs button:hover{
+    cursor: pointer;
+}
+
+.userTabs button.active{
+    background:rgba(53,79,68,0.02);
+    font-weight: 700;
+}
+
+.userName{
+    display: flex;
+    flex-direction: column;
+    padding:18px 32px;
+    margin:10px 0;
+}
+
+.userName h1{
+    font-size:34px;
+}
+
+.userName caption{
+    font-family: 'Poppins', sans-serif;
+}
+

@@ -106,6 +106,18 @@ button[type="submit"]:hover{
 
 .loginLinks a:hover{
     color:rgba(0,0,0,0.8);
+    text-decoration: underline;
+}
+
+.registrationSec{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.registrationSec div{
+    margin:0 10px;
 }
 
 @media (max-width: 768px) and (min-width:641px){
@@ -154,5 +166,7 @@ button[type="submit"]:hover{
 
     .loginLinks a{
         padding:15px 10px 0 10px;
+        text-decoration: underline;
     }
+
 }

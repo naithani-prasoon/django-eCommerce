@@ -1,5 +1,7 @@
-
+{% extends 'base.html' %}
+{% block content %}
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +14,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/standard.css' %}">
 </head>
 <body>
-    <div class = "pageSection">
-        <div class="loginProductPhoto">
-            <img src="{%static 'media/undraw_Login_re_4vu2.svg' %}">
-        </div>
-        
+    <div class = "pageSection">        
         <form method="POST" action="">
             {%csrf_token %}
             <div class = "formGrid">
@@ -29,6 +27,11 @@
                     <p>Password</p>
                     {{ signform.password }}
                 </div>
+                <div class ="errorText">
+                    {%for message in messages%}
+                        {{message}}
+                    {%endfor%}
+                </div>
                 <button type="submit">Sign In</button>
                 <div class="loginLinks">
                     <a href="{%url 'register'%}">Dont have an account?</a>
@@ -40,3 +43,4 @@
     </div>
 </body>
 </html>
+{% endblock %}

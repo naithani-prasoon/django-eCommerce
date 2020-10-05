@@ -1,0 +1,50 @@
+nav{
+    display:flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+    padding-top: 20px;
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+    z-index: 1;
+}
+
+header{
+    flex:2;
+    display: flex;
+    padding-left: 32px;
+}
+
+header h1{
+    font-size:24px;
+    margin:10px 0;
+    font-family: 'Playfair Display', serif;
+   
+}
+
+.actions{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding:0 32px;
+}
+
+.actions a{
+    margin:0 10px;
+    font-family: 'Poppins', sans-serif;
+    color:black;
+    transition: 0.4s ease-in-out;
+}
+
+.actions a:hover{
+    text-decoration: underline;
+}
+
+header img{
+    width:30px;
+}

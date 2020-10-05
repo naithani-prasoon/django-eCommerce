@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/standard.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/accounts.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="pageSection">
+        <div class="accountSection">
+            <div class="userTabs">
+                <div class="userName">
+                    <h1>Hey, {{user.first_name}}</h1>
+                    <figcaption> Member since {{user.date_joined}}</figcaption>
+                </div>
+                <button class ="accountTab" onclick="displayTab(event, 'overview')">Overview</button>
+                <button class ="accountTab" onclick="displayTab(event, 'account_settings')" id="accountDefault">Account Settings</button>
+                <button class ="accountTab" onclick="displayTab(event, 'address_book')">Address Book</button>
+                <button class ="accountTab" onclick="displayTab(event, 'order_history')">Order History</button>
+            </div>
+            <div class="userContent">
+                <div class = "accountTabs" id = "overview">
+                    overview
+                </div>
+                <div class = "accountTabs" id = "account_settings">
+                    {{user.username}}
+                    {{user.first_name}}
+                    {{user.last_name}}
+                    {{user.email}}
+                </div>
+                <div class = "accountTabs" id = "address_book">
+                    <form method="POST" action="">
+                        {%csrf_token%}
+                        Address Line 1
+                        {{ addressForm.address_line1 }}
+                    </form>
+                </div>
+                <div class = "accountTabs" id = "order_history">
+                    order history
+                </div>     
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'script/script.js' %}"></script>
+
+</body>
+</html>
+{% endblock %}
