@@ -3,12 +3,12 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.auth import login, logout, authenticate, get_user, get_user_model
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm, PasswordChangeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
 
-from .user import RegistrationForm
+from .user import RegistrationForm, ProfileForm
 
 def index(request):
     clearingMessage(request)
@@ -36,7 +36,6 @@ def userLogin(request):
     return render(request,'login.html',{'signform':form})
 
 
-
 def createUser(request):
     if request.method == 'POST':
         createForm = RegistrationForm(request.POST)
@@ -49,7 +48,7 @@ def createUser(request):
             return redirect('home')
         else:
             if(len(createForm.cleaned_data.get('password1')) < 6):
-                messages.error(request, "Passwords should be of atleast 6 characters.")     
+                messages.error(request, "Passwords should be of atleast 6 characters.")      
             elif(createForm.cleaned_data.get('password1') != createForm.cleaned_data.get('password2')):
                 messages.error(request, "Passwords didn't match. Try again.")
             else:
@@ -58,7 +57,6 @@ def createUser(request):
     else:
         createForm = RegistrationForm()
     return render(request, 'registration.html',{'form':createForm})
-       
 
 def clearingMessage(request):
     system_messages = messages.get_messages(request)
@@ -71,6 +69,20 @@ def userLogout(request):
 
 @login_required
 def userAccount(request):
-    return render(request, "account.html", {})
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            profile_personalForm = ProfileForm(request.POST, instance=request.user)
+            if profile_personalForm.is_valid():
+                profile_personalForm.save()
+        else:
+            profile_personalForm = ProfileForm(instance = request.user)
+        return render(request, 'account.html', {'profileForm' : profile_personalForm})
+        
+    else:
+        return redirect('login')
+
+
+
+    
 
 

@@ -25,27 +25,47 @@
                 <button class ="accountTab" onclick="displayTab(event, 'account_settings')" id="accountDefault">Account Settings</button>
                 <button class ="accountTab" onclick="displayTab(event, 'address_book')">Address Book</button>
                 <button class ="accountTab" onclick="displayTab(event, 'order_history')">Order History</button>
+                <button class ="accountTab" onclick="displayTab(event, 'change_password')">Change Password</button>
             </div>
             <div class="userContent">
                 <div class = "accountTabs" id = "overview">
                     overview
                 </div>
                 <div class = "accountTabs" id = "account_settings">
-                    {{user.username}}
-                    {{user.first_name}}
-                    {{user.last_name}}
-                    {{user.email}}
+                    <form action="" method="POST">
+                        {%csrf_token%}
+                        <div class ="formSection">
+                            <div class="inputField">
+                                <p>First Name</p>
+                                {{ profileForm.first_name }}
+                            </div>
+                            <div class="inputField">
+                                <p>Last Name</p>
+                                {{ profileForm.last_name }}
+                            </div>
+                        </div>
+                        <div class="inputField">
+                            <p>Email Address</p>
+                            {{ profileForm.email }}
+                        </div>
+                        <button type="submit" class ='saveButton'>Save Changes</button>
+                    </form>
                 </div>
                 <div class = "accountTabs" id = "address_book">
                     <form method="POST" action="">
                         {%csrf_token%}
                         Address Line 1
-                        {{ addressForm.address_line1 }}
                     </form>
                 </div>
                 <div class = "accountTabs" id = "order_history">
                     order history
-                </div>     
+                </div>   
+                <div class = "accountTabs" id = "change_password">
+                    change password
+                    <form action ="" method="POST">
+                        
+                    </form>    
+                </div>    
             </div>
         </div>
     </div>
