@@ -6,6 +6,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .userTabs{
@@ -127,6 +128,60 @@ button{
     box-shadow: 0 0 5px 1px rgba(0,0,0,0.1);
     cursor: pointer;
     background: rgba(0,0,0,0.8);
+}
+
+.messages{
+    position: fixed;
+    bottom:10%;
+    margin:0 auto;
+    left:50%;
+    transform: translate(-50%,5%);
+    opacity:0;
+    transition: 0.4s ease-in-out;
+    animation: profileMessage 8s;
+}
+
+@keyframes profileMessage{
+    0%{
+        opacity:0;
+        transform: translateY(50px);
+    }
+    12%{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    24%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    36%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    48%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    60%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    72%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    84%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    96%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
 }
 
 

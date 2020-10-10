@@ -70,13 +70,20 @@ def userLogout(request):
 @login_required
 def userAccount(request):
     if request.user.is_authenticated:
-        if request.method == 'POST':
-            profile_personalForm = ProfileForm(request.POST, instance=request.user)
-            if profile_personalForm.is_valid():
-                profile_personalForm.save()
-        else:
-            profile_personalForm = ProfileForm(instance = request.user)
-        return render(request, 'account.html', {'profileForm' : profile_personalForm})
+        profile_personalForm = ProfileForm(instance=request.user)
+        profile_changePassword = PasswordChangeForm(user=request.user)
+        if request.method == 'POST': 
+            if 'personalInfo' in request.POST:
+                profile_personalForm = ProfileForm(request.POST, instance=request.user)
+                if profile_personalForm.is_valid():
+                    profile_personalForm.save()
+            elif 'changePassword' in request.POST:
+                profile_changePassword = PasswordChangeForm(data=request.POST, user=request.user)
+                if profile_changePassword.is_valid():
+                    profile_changePassword.save()
+                    messages.success(request, 'Password Successfully Changed')
+
+        return render(request, 'account.html', {'profileForm' : profile_personalForm, 'passwordChange': profile_changePassword})
         
     else:
         return redirect('login')
