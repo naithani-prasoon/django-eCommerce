@@ -2,7 +2,7 @@
 
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from django.contrib.auth import login, logout, authenticate, get_user, get_user_model
+from django.contrib.auth import login, logout, authenticate, get_user, get_user_model, update_session_auth_hash
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm, PasswordChangeForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -81,7 +81,9 @@ def userAccount(request):
                 profile_changePassword = PasswordChangeForm(data=request.POST, user=request.user)
                 if profile_changePassword.is_valid():
                     profile_changePassword.save()
+                    update_session_auth_hash(request, profile_changePassword.user)
                     messages.success(request, 'Password Successfully Changed')
+                    redirect('account')
 
         return render(request, 'account.html', {'profileForm' : profile_personalForm, 'passwordChange': profile_changePassword})
         

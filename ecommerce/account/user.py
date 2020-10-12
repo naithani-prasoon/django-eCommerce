@@ -18,10 +18,7 @@ class ProfileForm(UserChangeForm):
         model = User
         fields = ['first_name', 'last_name', 'email']
         labels = {'first_name': '', 'last_name' : '', 'email' : ''}    
-                    # elif request.POST.get('name') == 'changePassword':
-            #     profile_changePassword = PasswordChangeForm(data=request.POST, user=request.user)
-            #     if profile_changePassword.is_valid():
-            #         profile_changePassword.save()
+
 
 
 
