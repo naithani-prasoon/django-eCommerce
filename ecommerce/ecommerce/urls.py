@@ -2,8 +2,11 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 from account import views as account_views
-from product import views as product_views
+from products import views as product_views
 
 urlpatterns = [
     path('', account_views.index, name="home" ),
@@ -23,4 +26,5 @@ urlpatterns = [
     path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(), name="reset_password_done"),
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name="reset_password_confirm"),
     path('reset_password_completed/', auth_views.PasswordResetCompleteView.as_view(), name="reset_password_complete")
-]
+] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+

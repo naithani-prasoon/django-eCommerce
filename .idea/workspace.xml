@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="757038b7-dd56-48cb-9f0d-dc95f27cfcb2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ecommerce/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/ecommerce/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/ecommerce/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/ecommerce/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/ecommerce/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/product/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/product/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/product/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/product/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/product/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/product/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ecommerce/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/product/views.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iqPPMOOtQI8nG2Ml7ZtIfP9pKm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="757038b7-dd56-48cb-9f0d-dc95f27cfcb2" name="Default Changelist" comment="" />
+      <created>1602632143992</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1602632143992</updated>
+      <workItem from="1602632153297" duration="472000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="719" y="362" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602632273111">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="719" y="362" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1920.1040@0.40.1920.1040" timestamp="1602632273111" />
+    <state x="461" y="205" key="SettingsEditor" timestamp="1602632554216">
+      <screen x="0" y="40" width="1920" height="1040" />
+    </state>
+    <state x="461" y="205" key="SettingsEditor/0.40.1920.1040@0.40.1920.1040" timestamp="1602632554216" />
+  </component>
+</project>

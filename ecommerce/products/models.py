@@ -4,10 +4,10 @@ class Products(models.Model):
     title = models.CharField(max_length=25)
     offer = models.BooleanField(default=False)
     category = models.CharField(max_length=25)
-    descirption = models.CharField(max_length=100, default='')
+    description = models.CharField(max_length=100, default='')
     price = models.IntegerField(default=0)
     discount_price = models.IntegerField(default=0)
-    image = models.ImageField()
+    image = models.ImageField(upload_to = 'product_static/', blank = True)
 
     class Meta:
         managed = True

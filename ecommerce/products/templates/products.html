@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/products.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/standard.css' %}">
+</head>
+<body>
+    <div class="productPageSection">
+        <div class="productHeading">
+            <h1>All Products.</h1>
+        </div>
+        <div class="productSection">
+            {%for product in products%}
+            <div class="productCard">
+                <img src = "{{product.image.url}}">
+                <div class="productInfo">
+                    <div class="productTitle">
+                        {{product.title}}
+                    </div>
+                    <div class="productDescription">
+                        {{product.description}}
+                    </div>      
+                    <div class="productPrice">
+                        ${{product.price}}
+                    </div>
+                </div>         
+            </div>
+            {%endfor%}
+        </div>
+
+    </div>
+
+</body>
+</html>
+{% endblock %}
