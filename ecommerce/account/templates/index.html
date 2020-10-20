@@ -9,11 +9,25 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/standard.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+
 </head>
 <body>
-    <div class="pageSection">
-        This is Home!
+    <div class="homeBanner">
+        <div class="homeBanner-text">
+            <h1> Catchy Title</h1>
+            <h6> Company's Objective (Tagline) </h6>  
+            <div class = "homeBanner-buttons">
+                <button>Primary Button</button>
+                <button class ="secondaryButton">Secondary Button</button>
+            </div> 
+            
+        </div>
+        <div class="homeBanner-image">
+            <img src="{%static 'media/home-banner.jpg' %}">
+        </div>
     </div>
+    <a href="{% url 'products' %}">Go to Products</a>
     
 </body>
 </html>

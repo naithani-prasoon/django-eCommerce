@@ -1,0 +1,74 @@
+
+.homeBanner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background-color: rgb(230,231,233);
+    width:100%;
+    margin:0;
+    padding:0;
+    height: 100vh;
+
+}
+
+.homeBanner-text{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 120px;
+}
+
+.homeBanner-text h6{
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin:10px 0;
+    font-weight: 300;
+}
+
+.homeBanner-text .homeBanner-buttons{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin:10px 0;
+}
+
+.homeBanner-buttons button{
+    padding:16px 24px;
+    border: 2px solid rgb(53,79,68);
+    outline: none;
+    background: rgb(53,79,68);
+    color:white;
+    font-size: 18px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.homeBanner-buttons .secondaryButton{
+    background: transparent;
+    color:rgb(53,79,68);
+
+}
+
+.homeBanner-image{
+    flex: 1;
+    text-align: right;
+    padding-top: 80px;
+}
+
+.homeBanner-image img{
+    width:800px;
+}
+
+
+@media (min-width:1600px){
+    .homeBanner-image img{
+        width:1200px;
+    }
+}

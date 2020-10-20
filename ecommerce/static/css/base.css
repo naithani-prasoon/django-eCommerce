@@ -25,7 +25,10 @@ header h1{
     font-size:24px;
     margin:10px 0;
     font-family: 'Playfair Display', serif;
-   
+}
+
+header h1 a{
+    color:black;
 }
 
 .actions{
@@ -47,5 +50,7 @@ header h1{
 }
 
 header img{
+    margin-top:10px;
     width:30px;
+    height:30px;
 }

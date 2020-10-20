@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'css/products.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/standard.css' %}">
 </head>
@@ -18,7 +19,12 @@
         <div class="productSection">
             {%for product in products%}
             <div class="productCard">
-                <img src = "{{product.image.url}}">
+                {% if product.offer == True and product.discount_price != 0%}
+                    <div class="productOffer">
+                        Special Offer
+                    </div>
+                {%endif%}
+                <img src = "{{product.image.url}}" alt ="Product's Image">
                 <div class="productInfo">
                     <div class="productTitle">
                         {{product.title}}
@@ -27,9 +33,23 @@
                         {{product.description}}
                     </div>      
                     <div class="productPrice">
-                        ${{product.price}}
+                        {%if product.discount_price != 0 %}
+                            <div class="actualPrice">
+                                ${{product.price}}
+                            </div>
+                            <div class="discountPrice">
+                                ${{product.discount_price}}
+                            </div>
+                        {%else%}
+                            ${{product.price}}
+                        {%endif%}
                     </div>
-                </div>         
+                </div>
+                <div class="productActions">
+                    <i class="material-icons colored">visibility</i>
+                    <i class="material-icons colored change">favorite_border</i>
+                    <i class="material-icons colored">add_shopping_cart</i>
+                </div>
             </div>
             {%endfor%}
         </div>

@@ -17,6 +17,11 @@ body{
     padding:80px;
     overflow: hidden;
 }
+@media (min-width:1800px){
+    .productPageSection{
+        max-width: 1600px;
+    }
+}
 
 .productHeading{
     background-color: rgba(53,79,68,0.2);
@@ -26,17 +31,19 @@ body{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
 }
 
 .productHeading h1{
     font-size:72px;
 }
 
+
 .productSection{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     position: relative;
     padding:40px;
@@ -46,12 +53,13 @@ body{
 .productCard{
     display: flex;
     flex-direction: column;
+    position: relative;
     padding:20px;
-    border: 1px solid rgba(0,0,0,0.1);
+    /* border: 1px solid rgba(0,0,0,0.1); */
     width:300px;
     height:500px;
     margin-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .productInfo{
@@ -69,9 +77,25 @@ body{
     color: rgb(180,180, 180 );
     font-weight: 300;
     font-style: italic;
+    margin-top: 3px;
 }
 
 .productPrice{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 3px;
+    display: flex;
+}
+
+.actualPrice{
+    color:rgb(180,180,180);
+    font-style: italic;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.discountPrice{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 600;
@@ -81,3 +105,41 @@ body{
     width: 300px;
     margin-bottom: 10px;
 }
+
+.productActions{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    bottom:0;
+    right:20px;
+}
+
+.productActions i{
+    width:20px;
+    margin-right: 10px;
+    margin-bottom:10px;
+}
+
+.material-icons.colored{
+    color: rgb(180,180,180);
+    font-size: 22px;
+    transition: 0.4s ease-in-out;
+}
+
+.material-icons:hover{
+    color:black;
+    cursor: pointer;
+}
+
+.productOffer{
+    position: absolute;
+    padding:10px 15px;
+    top:40px;
+    left:20px;
+    background-color: indianred;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color:white;
+}
+

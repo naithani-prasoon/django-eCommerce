@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav>
-        <header><img src="{%static 'media/logo.svg' %}" ><h1>Company's Name</h1></header>
+        <header><img src="{%static 'media/logo.png' %}" ><h1><a href ="{% url 'home' %}">Company's Name</a></h1></header>
         <div class="actions">
             {% if user.is_authenticated %}
                 <a href="{% url 'account' %}">{{user.first_name}}</a>
