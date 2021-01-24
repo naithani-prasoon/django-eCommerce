@@ -13,21 +13,34 @@
 
 </head>
 <body>
-    <div class="homeBanner">
-        <div class="homeBanner-text">
-            <h1> Catchy Title</h1>
-            <h6> Company's Objective (Tagline) </h6>  
-            <div class = "homeBanner-buttons">
-                <button>Primary Button</button>
-                <button class ="secondaryButton">Secondary Button</button>
-            </div> 
-            
+    <div class="homeContainer">
+        <div class="home-hero">
+            <div class="homeBanner">
+                <div class="homeBanner-text">
+                    <h1> Catchy Title</h1>
+                    <div class = "homeBanner-buttons">
+                        <button>Learn More</button>
+                    </div> 
+                </div>
+                <div class="homeBanner-image">
+                    <img src="{%static 'media/home-banner.jpg' %}">
+                </div>
+            </div>
         </div>
-        <div class="homeBanner-image">
-            <img src="{%static 'media/home-banner.jpg' %}">
+        <div class="aboutUs">
+            <div class = "aboutUs-text">
+                <h2>Some about us information which <br>shows the usp of the company.</h2>
+            </div>
+            <div class="aboutUs-featured">
+                {% for featured_image in featured %}
+                    <div class="featured-image">
+                        <img src="{{featured_image.image}}" alt="Featured Image">
+                    </div>
+                {%endfor%}
+            </div>
         </div>
+        <a href="{% url 'products' %}">Go to Products</a>
     </div>
-    <a href="{% url 'products' %}">Go to Products</a>
     
 </body>
 </html>

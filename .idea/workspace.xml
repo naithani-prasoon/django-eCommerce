@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="757038b7-dd56-48cb-9f0d-dc95f27cfcb2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/ecommerce/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/ecommerce/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/ecommerce/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/ecommerce/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/ecommerce/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/product/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/product/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/product/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/product/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/product/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/product/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ecommerce/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ecommerce/product/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Switch_Project" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -42,6 +35,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602632143992</updated>
       <workItem from="1602632153297" duration="472000" />
+      <workItem from="1610694779521" duration="45000" />
     </task>
     <servers />
   </component>
@@ -53,6 +47,10 @@
       <screen x="0" y="40" width="1920" height="1040" />
     </state>
     <state x="719" y="362" key="#com.intellij.fileTypes.FileTypeChooser/0.40.1920.1040@0.40.1920.1040" timestamp="1602632273111" />
+    <state x="549" y="207" key="FileChooserDialogImpl" timestamp="1610694825155">
+      <screen x="0" y="40" width="1536" height="824" />
+    </state>
+    <state x="549" y="207" key="FileChooserDialogImpl/0.40.1536.824@0.40.1536.824" timestamp="1610694825155" />
     <state x="461" y="205" key="SettingsEditor" timestamp="1602632554216">
       <screen x="0" y="40" width="1920" height="1040" />
     </state>

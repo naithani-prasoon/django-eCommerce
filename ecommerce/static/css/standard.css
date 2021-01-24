@@ -29,7 +29,14 @@ h1{
     margin-block-start: 0;
     margin-block-end: 0;
     font-size: 52px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', serif;
+}
+
+h2{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 32px;
+    font-family: 'Poppins', serif;
 }
 
 figcaption{

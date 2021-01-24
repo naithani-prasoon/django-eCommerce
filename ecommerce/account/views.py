@@ -9,10 +9,15 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 
 from .user import RegistrationForm, ProfileForm
+from .models import Featured
 
 def index(request):
     clearingMessage(request)
     return render(request,"index.html",{})
+
+def featuredProducts(request):
+    featuringProducts = Featured.objects.all()
+    return render(request, 'index.html', {'featured': featuringProducts})
 
 def userLogin(request):
     if request.method == 'POST':
