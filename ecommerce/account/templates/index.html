@@ -34,12 +34,12 @@
             <div class="aboutUs-featured">
                 {% for featured in featuring %}
                     <div class="featured-image">
-                        <img src='{{featured.image}}' alt="Featured Image">
+                        <img src="{{featured.image.url}}">
                     </div>
                 {% endfor %}
             </div>
         </div>
-        <a href="{% url 'products' %}">Go to Products</a>
+        <a href="{% url 'products' %}" style="padding:18px 32px; background:indianred; color:white; font-family:'Poppins', serif;">Go to Products</a>
     </div>
     
 </body>
