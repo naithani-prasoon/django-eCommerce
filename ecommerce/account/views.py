@@ -15,7 +15,7 @@ from .models import Featured
 def index(request):
     clearingMessage(request)
     featured = Featured.objects.all()
-    return render(request,"index.html",{'featuring':featured})
+    return render(request,"index.html",{'featuring': featured })
 
 
 def userLogin(request):
