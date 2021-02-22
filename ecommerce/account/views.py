@@ -3,14 +3,18 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from django.contrib.auth import login, logout, authenticate, get_user, get_user_model, update_session_auth_hash
-from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm, PasswordChangeForm
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UserChangeForm, PasswordChangeForm, PasswordResetForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.contrib.auth.models import User
+from django.db.models.query_utils import Q
 
 from .user import RegistrationForm, ProfileForm
 
+import sys
+
 from .models import Featured
+
 
 def index(request):
     clearingMessage(request)
@@ -70,6 +74,16 @@ def clearingMessage(request):
 def userLogout(request):
     logout(request)
     return redirect("login")
+
+def passwordReset(request):
+    if request.method == "POST":
+        password_reset = PasswordResetForm(request.POST)
+        if password_reset.is_valid():
+            email_ID = password_reset.cleaned_data['email']
+            existing_user = User.objects.filter(Q(email = email_ID))
+            if existing_user.exists():
+                print("HI")
+
 
 @login_required
 def userAccount(request):
